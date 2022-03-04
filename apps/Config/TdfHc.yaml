@@ -1,7 +1,8 @@
 %YAML 1.2
 ---
 #TDF information
-server_ip: "server_ip"
-server_port: "server_port"
-username: "username"
-password: "password"
+Test: 
+ server_ip: "119.3.103.38"
+ server_port: 6002
+ username: "253191000198"
+ password: "RnancU1F"
