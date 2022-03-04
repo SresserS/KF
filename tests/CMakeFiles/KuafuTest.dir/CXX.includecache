@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lixf/Kuafu/tests/KuafuTest.cpp
+Kuafu.h
+/home/lixf/Kuafu/tests/Kuafu.h
+catch2/catch.hpp
+/home/lixf/Kuafu/tests/catch2/catch.hpp
+
+include/Kuafu.h
+

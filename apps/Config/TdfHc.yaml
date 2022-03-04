@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+#TDF information
+server_ip: "server_ip"
+server_port: "server_port"
+username: "username"
+password: "password"
