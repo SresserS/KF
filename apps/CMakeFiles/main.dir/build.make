@@ -81,6 +81,7 @@ apps/main: apps/CMakeFiles/main.dir/main.cpp.o
 apps/main: apps/CMakeFiles/main.dir/build.make
 apps/main: src/libLogConfig.a
 apps/main: src/libKuafu.a
+apps/main: src/libquote_spi.a
 apps/main: /usr/local/lib/libyaml-cpp.so.0.6.3
 apps/main: /usr/local/lib/libspdlog.a
 apps/main: /usr/local/lib/libfmt.a

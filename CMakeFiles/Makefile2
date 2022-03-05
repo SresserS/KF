@@ -95,6 +95,7 @@ apps/clean: apps/CMakeFiles/main.dir/clean
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
+src/all: src/CMakeFiles/quote_spi.dir/all
 src/all: src/CMakeFiles/Kuafu.dir/all
 src/all: src/CMakeFiles/LogConfig.dir/all
 
@@ -106,6 +107,7 @@ src/preinstall:
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
+src/clean: src/CMakeFiles/quote_spi.dir/clean
 src/clean: src/CMakeFiles/Kuafu.dir/clean
 src/clean: src/CMakeFiles/LogConfig.dir/clean
 
@@ -130,6 +132,33 @@ tests/clean: tests/CMakeFiles/NumericTimeTest.dir/clean
 tests/clean: tests/CMakeFiles/KuafuTest.dir/clean
 
 .PHONY : tests/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/quote_spi.dir
+
+# All Build rule for target.
+src/CMakeFiles/quote_spi.dir/all:
+	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/depend
+	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangkn/KF/CMakeFiles --progress-num=11,12 "Built target quote_spi"
+.PHONY : src/CMakeFiles/quote_spi.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/quote_spi.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/quote_spi.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
+.PHONY : src/CMakeFiles/quote_spi.dir/rule
+
+# Convenience name for target.
+quote_spi: src/CMakeFiles/quote_spi.dir/rule
+
+.PHONY : quote_spi
+
+# clean rule for target.
+src/CMakeFiles/quote_spi.dir/clean:
+	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/clean
+.PHONY : src/CMakeFiles/quote_spi.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/Kuafu.dir
@@ -243,6 +272,7 @@ tests/CMakeFiles/KuafuTest.dir/clean:
 # Target rules for target apps/CMakeFiles/main.dir
 
 # All Build rule for target.
+apps/CMakeFiles/main.dir/all: src/CMakeFiles/quote_spi.dir/all
 apps/CMakeFiles/main.dir/all: src/CMakeFiles/Kuafu.dir/all
 apps/CMakeFiles/main.dir/all: src/CMakeFiles/LogConfig.dir/all
 	$(MAKE) -f apps/CMakeFiles/main.dir/build.make apps/CMakeFiles/main.dir/depend
@@ -252,7 +282,7 @@ apps/CMakeFiles/main.dir/all: src/CMakeFiles/LogConfig.dir/all
 
 # Build rule for subdir invocation for target.
 apps/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
 .PHONY : apps/CMakeFiles/main.dir/rule

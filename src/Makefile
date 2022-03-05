@@ -68,6 +68,28 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -100,28 +122,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/wangkn/KF && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/CMakeFiles/quote_spi.dir/rule:
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/quote_spi.dir/rule
+.PHONY : src/CMakeFiles/quote_spi.dir/rule
+
+# Convenience name for target.
+quote_spi: src/CMakeFiles/quote_spi.dir/rule
+
+.PHONY : quote_spi
+
+# fast build rule for target.
+quote_spi/fast:
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
+.PHONY : quote_spi/fast
 
 # Convenience name for target.
 src/CMakeFiles/Kuafu.dir/rule:
@@ -251,6 +266,33 @@ LogConfig.cpp.s:
 	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.s
 .PHONY : LogConfig.cpp.s
 
+quote_spi.o: quote_spi.cpp.o
+
+.PHONY : quote_spi.o
+
+# target to build an object file
+quote_spi.cpp.o:
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.o
+.PHONY : quote_spi.cpp.o
+
+quote_spi.i: quote_spi.cpp.i
+
+.PHONY : quote_spi.i
+
+# target to preprocess a source file
+quote_spi.cpp.i:
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.i
+.PHONY : quote_spi.cpp.i
+
+quote_spi.s: quote_spi.cpp.s
+
+.PHONY : quote_spi.s
+
+# target to generate assembly for a file
+quote_spi.cpp.s:
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.s
+.PHONY : quote_spi.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,11 +300,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... quote_spi"
 	@echo "... install/local"
 	@echo "... Kuafu"
 	@echo "... LogConfig"
@@ -272,6 +315,9 @@ help:
 	@echo "... LogConfig.o"
 	@echo "... LogConfig.i"
 	@echo "... LogConfig.s"
+	@echo "... quote_spi.o"
+	@echo "... quote_spi.i"
+	@echo "... quote_spi.s"
 .PHONY : help
 
 

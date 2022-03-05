@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named quote_spi
+
+# Build rule for target.
+quote_spi: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 quote_spi
+.PHONY : quote_spi
+
+# fast build rule for target.
+quote_spi/fast:
+	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
+.PHONY : quote_spi/fast
+
+#=============================================================================
 # Target rules for targets named Kuafu
 
 # Build rule for target.
@@ -245,6 +258,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... quote_spi"
 	@echo "... Kuafu"
 	@echo "... LogConfig"
 	@echo "... NumericTimeTest"

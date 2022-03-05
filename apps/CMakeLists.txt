@@ -38,6 +38,8 @@ if ("main" IN_LIST target_apps)
         LogConfig::LogConfig
         Threads::Threads
         Kuafu::Kuafu
+        quote_spi::quote_spi
     )
+
     install(TARGETS ${target_name} DESTINATION bin)
 endif()

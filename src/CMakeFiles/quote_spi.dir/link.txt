@@ -1,0 +1,2 @@
+/usr/bin/ar qc libquote_spi.a  CMakeFiles/quote_spi.dir/quote_spi.cpp.o
+/usr/bin/ranlib libquote_spi.a

@@ -6,11 +6,12 @@
 /home/wangkn/KF/CMakeFiles/edit_cache.dir
 /home/wangkn/KF/CMakeFiles/test.dir
 /home/wangkn/KF/src/CMakeFiles/install/strip.dir
+/home/wangkn/KF/src/CMakeFiles/edit_cache.dir
+/home/wangkn/KF/src/CMakeFiles/test.dir
 /home/wangkn/KF/src/CMakeFiles/install.dir
 /home/wangkn/KF/src/CMakeFiles/list_install_components.dir
 /home/wangkn/KF/src/CMakeFiles/rebuild_cache.dir
-/home/wangkn/KF/src/CMakeFiles/edit_cache.dir
-/home/wangkn/KF/src/CMakeFiles/test.dir
+/home/wangkn/KF/src/CMakeFiles/quote_spi.dir
 /home/wangkn/KF/src/CMakeFiles/install/local.dir
 /home/wangkn/KF/src/CMakeFiles/Kuafu.dir
 /home/wangkn/KF/src/CMakeFiles/LogConfig.dir

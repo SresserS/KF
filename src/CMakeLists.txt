@@ -57,5 +57,31 @@ PUBLIC
 )
 add_library(Kuafu::Kuafu ALIAS Kuafu)
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
+link_directories(${CMAKE_SOURCE_DIR}/include)
+
+
+add_library(quote_spi)
+target_sources(
+	quote_spi
+PRIVATE
+	quote_spi.cpp
+)
+target_include_directories(
+	quote_spi
+PUBLIC
+	$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
+target_link_libraries(
+    quote_spi
+PUBLIC
+    Threads::Threads
+    ${XTP_BASE_LIBS}
+)
+add_library(quote_spi::quote_spi ALIAS quote_spi)
+	
+
+
 install(TARGETS Kuafu DESTINATION lib)
 install(FILES ${CMAKE_SOURCE_DIR}/include/Kuafu.h DESTINATION include)

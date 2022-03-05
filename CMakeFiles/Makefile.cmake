@@ -74,6 +74,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/CMakeFiles/quote_spi.dir/DependInfo.cmake"
   "src/CMakeFiles/Kuafu.dir/DependInfo.cmake"
   "src/CMakeFiles/LogConfig.dir/DependInfo.cmake"
   "tests/CMakeFiles/NumericTimeTest.dir/DependInfo.cmake"
