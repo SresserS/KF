@@ -114,13 +114,14 @@ int main(int argc, char* argv[]) {
 
     // tdf account config addtional 
     std::string filepath; 
-    uint32_t client_id;
+    uint8_t  client_id;
     uint32_t tdf_exchange;
     uint32_t heat_beat_interval;
     uint32_t quote_buffer_size;
     uint32_t quote_protocol;
     uint32_t instrument_count;
     std::vector<std::string> vec_instruments;
+    
     // risk config
     kf::price_t account_threshold;
     uint32_t    count_threshold  ;

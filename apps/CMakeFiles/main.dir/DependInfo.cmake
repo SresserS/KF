@@ -24,6 +24,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/lixf/Kuafu/src/CMakeFiles/LogConfig.dir/DependInfo.cmake"
   "/home/lixf/Kuafu/src/CMakeFiles/Kuafu.dir/DependInfo.cmake"
+  "/home/lixf/Kuafu/src/CMakeFiles/quote_spi.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

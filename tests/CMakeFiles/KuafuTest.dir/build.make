@@ -79,7 +79,6 @@ KuafuTest_EXTERNAL_OBJECTS =
 
 tests/KuafuTest: tests/CMakeFiles/KuafuTest.dir/KuafuTest.cpp.o
 tests/KuafuTest: tests/CMakeFiles/KuafuTest.dir/build.make
-tests/KuafuTest: src/libKuafu.a
 tests/KuafuTest: tests/CMakeFiles/KuafuTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable KuafuTest"
 	cd /home/lixf/Kuafu/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/KuafuTest.dir/link.txt --verbose=$(VERBOSE)

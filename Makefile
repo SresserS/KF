@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named quote_spi
+
+# Build rule for target.
+quote_spi: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 quote_spi
+.PHONY : quote_spi
+
+# fast build rule for target.
+quote_spi/fast:
+	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
+.PHONY : quote_spi/fast
+
+#=============================================================================
 # Target rules for targets named Kuafu
 
 # Build rule for target.
@@ -192,32 +205,6 @@ LogConfig: cmake_check_build_system
 LogConfig/fast:
 	$(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/build
 .PHONY : LogConfig/fast
-
-#=============================================================================
-# Target rules for targets named NumericTimeTest
-
-# Build rule for target.
-NumericTimeTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 NumericTimeTest
-.PHONY : NumericTimeTest
-
-# fast build rule for target.
-NumericTimeTest/fast:
-	$(MAKE) -f tests/CMakeFiles/NumericTimeTest.dir/build.make tests/CMakeFiles/NumericTimeTest.dir/build
-.PHONY : NumericTimeTest/fast
-
-#=============================================================================
-# Target rules for targets named KuafuTest
-
-# Build rule for target.
-KuafuTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 KuafuTest
-.PHONY : KuafuTest
-
-# fast build rule for target.
-KuafuTest/fast:
-	$(MAKE) -f tests/CMakeFiles/KuafuTest.dir/build.make tests/CMakeFiles/KuafuTest.dir/build
-.PHONY : KuafuTest/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -245,10 +232,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... quote_spi"
 	@echo "... Kuafu"
 	@echo "... LogConfig"
-	@echo "... NumericTimeTest"
-	@echo "... KuafuTest"
 	@echo "... main"
 .PHONY : help
 

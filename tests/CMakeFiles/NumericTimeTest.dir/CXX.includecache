@@ -6,27 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/lixf/Kuafu/tests/NumericTimeTest.cpp
-NumericTime.h
-/home/lixf/Kuafu/tests/NumericTime.h
-catch2/catch.hpp
-/home/lixf/Kuafu/tests/catch2/catch.hpp
-iostream
--
-sstream
--
-
-include/NumericTime.h
-iostream
--
-string
--
-cstring
--
-chrono
--
-date/date.h
--
-time.h
--
-

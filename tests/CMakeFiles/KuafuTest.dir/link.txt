@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/KuafuTest.dir/KuafuTest.cpp.o  -o KuafuTest  ../src/libKuafu.a -pthread 
+/usr/bin/c++     CMakeFiles/KuafuTest.dir/KuafuTest.cpp.o  -o KuafuTest  -lKuafu::Kuafu 

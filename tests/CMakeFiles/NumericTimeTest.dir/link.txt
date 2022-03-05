@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/NumericTimeTest.dir/NumericTimeTest.cpp.o  -o NumericTimeTest  ../src/libKuafu.a -pthread 
+/usr/bin/c++     CMakeFiles/NumericTimeTest.dir/NumericTimeTest.cpp.o  -o NumericTimeTest  -lKuafu::Kuafu 

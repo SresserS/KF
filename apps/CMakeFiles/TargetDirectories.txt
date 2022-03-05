@@ -1,0 +1,7 @@
+/home/lixf/Kuafu/apps/CMakeFiles/install/strip.dir
+/home/lixf/Kuafu/apps/CMakeFiles/install/local.dir
+/home/lixf/Kuafu/apps/CMakeFiles/install.dir
+/home/lixf/Kuafu/apps/CMakeFiles/list_install_components.dir
+/home/lixf/Kuafu/apps/CMakeFiles/rebuild_cache.dir
+/home/lixf/Kuafu/apps/CMakeFiles/edit_cache.dir
+/home/lixf/Kuafu/apps/CMakeFiles/main.dir

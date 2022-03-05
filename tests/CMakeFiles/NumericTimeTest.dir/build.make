@@ -79,7 +79,6 @@ NumericTimeTest_EXTERNAL_OBJECTS =
 
 tests/NumericTimeTest: tests/CMakeFiles/NumericTimeTest.dir/NumericTimeTest.cpp.o
 tests/NumericTimeTest: tests/CMakeFiles/NumericTimeTest.dir/build.make
-tests/NumericTimeTest: src/libKuafu.a
 tests/NumericTimeTest: tests/CMakeFiles/NumericTimeTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable NumericTimeTest"
 	cd /home/lixf/Kuafu/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NumericTimeTest.dir/link.txt --verbose=$(VERBOSE)

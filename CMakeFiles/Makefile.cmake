@@ -13,10 +13,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeLists.txt"
   "apps/CMakeLists.txt"
   "src/CMakeLists.txt"
-  "tests/CMakeLists.txt"
-  "/usr/local/lib/cmake/Catch2/Catch2Config.cmake"
-  "/usr/local/lib/cmake/Catch2/Catch2ConfigVersion.cmake"
-  "/usr/local/lib/cmake/Catch2/Catch2Targets.cmake"
   "/usr/local/lib/cmake/fmt/fmt-config-version.cmake"
   "/usr/local/lib/cmake/fmt/fmt-config.cmake"
   "/usr/local/lib/cmake/fmt/fmt-targets-release.cmake"
@@ -68,15 +64,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "apps/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/CMakeFiles/quote_spi.dir/DependInfo.cmake"
   "src/CMakeFiles/Kuafu.dir/DependInfo.cmake"
   "src/CMakeFiles/LogConfig.dir/DependInfo.cmake"
-  "tests/CMakeFiles/NumericTimeTest.dir/DependInfo.cmake"
-  "tests/CMakeFiles/KuafuTest.dir/DependInfo.cmake"
   "apps/CMakeFiles/main.dir/DependInfo.cmake"
   )
