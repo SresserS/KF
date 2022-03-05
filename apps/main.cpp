@@ -10,6 +10,11 @@
 #include "LogConfig.h"
 #include "TypeDefs.h"
 #include "YAMLGetField.h"
+#include "trade_spi.h"
+#include "xtp_quote_api.h"
+#include "quote_spi.h"
+#include "xquote_api_struct.h"
+#include "xtp_trader_api.h"
 
 #include <ctime>
 #include <errno.h>
@@ -195,6 +200,48 @@ int main(int argc, char* argv[]) {
     //=============================================================//
     //                      +. Data Segment 
     //=============================================================//
+
+    //初始化行情api
+	XTP::API::QuoteApi* pQuoteApi = XTP::API::QuoteApi::CreateQuoteApi(client_id, filepath.c_str(), XTP_LOG_LEVEL_DEBUG);//log日志级别可以调整
+	MyQuoteSpi* pQuoteSpi = new MyQuoteSpi();
+	pQuoteApi->RegisterSpi(pQuoteSpi);
+
+	//设定行情服务器超时时间，单位为秒
+	pQuoteApi->SetHeartBeatInterval(heat_beat_interval); //此为1.1.16新增接口
+	//设定行情本地缓存大小，单位为MB
+	pQuoteApi->SetUDPBufferSize(quote_buffer_size);//此为1.1.16新增接口
+
+	int loginResult_quote = -1;
+	//登录行情服务器,自1.1.16开始，行情服务器支持UDP连接，推荐使用UDP
+	loginResult_quote = pQuoteApi->Login(tdf_server_ip, tdf_server_port, tdf_username.c_str(), tdf_password.c_str(), quote_protocol); 
+	if (loginResult_quote == 0)
+	{
+		//登录行情服务器成功后，订阅行情
+		int instrument_count = ;//yaml::NODE
+		int quote_exchange = tdf_exchange;
+
+		//从配置文件中读取需要订阅的股票
+		char* *allInstruments = new char*[instrument_count];
+		for (int i = 0; i < instrument_count; i++) {
+			allInstruments[i] = new char[7];
+			std::string instrument = ;
+			strcpy(allInstruments[i], instrument.c_str());
+		}
+		
+
+
+		//开始订阅,注意公网测试环境仅支持TCP方式，如果使用UDP方式会没有行情数据，实盘大多数使用UDP连接
+		pQuoteApi->SubscribeMarketData(allInstruments, instrument_count, (XTP_EXCHANGE_TYPE)quote_exchange);
+		pQuoteApi->SubscribeTickByTick(allInstruments, instrument_count, (XTP_EXCHANGE_TYPE)quote_exchange);
+
+        for (int i = 0; i < instrument_count; i++) {
+			delete[] allInstruments[i];
+			allInstruments[i] = NULL;
+		}
+
+		delete[] allInstruments;
+		allInstruments = NULL;
+
 
     //=============================================================//
     //                      +. start market                        //
