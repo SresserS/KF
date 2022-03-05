@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/wangkn/KF/src/LogConfig.cpp
+/home/lixf/Kuafu/src/LogConfig.cpp
 LogConfig.h
-/home/wangkn/KF/src/LogConfig.h
+/home/lixf/Kuafu/src/LogConfig.h
 KuafuUtils.h
-/home/wangkn/KF/src/KuafuUtils.h
+/home/lixf/Kuafu/src/KuafuUtils.h
 ctime
 -
 iomanip

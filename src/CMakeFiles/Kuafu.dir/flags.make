@@ -6,5 +6,5 @@ CXX_FLAGS =   -pthread -std=c++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/wangkn/KF/include 
+CXX_INCLUDES = -I/home/lixf/Kuafu/include 
 

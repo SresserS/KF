@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/wangkn/KF/apps
-# Build directory: /home/wangkn/KF/apps
+# Source directory: /home/lixf/Kuafu/apps
+# Build directory: /home/lixf/Kuafu/apps
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

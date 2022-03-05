@@ -10,7 +10,6 @@
 #include "LogConfig.h"
 #include "TypeDefs.h"
 #include "YAMLGetField.h"
-#include "trade_spi.h"
 #include "xtp_quote_api.h"
 #include "quote_spi.h"
 #include "xquote_api_struct.h"
@@ -168,7 +167,8 @@ int main(int argc, char* argv[]) {
         YAML::Node node_instruments   = tdf_account["instrument"];
         instrument_count         = node_instruments.size();
         for(int i = 0 ; i < instrument_count ; i++ ){
-            std::string temp_instrument   = node_instruments[0].as<std::string>;
+
+            std::string temp_instrument   = node_instruments[i].as<std::string>();
             vec_instruments.push_back(temp_instrument);
         }
     }
@@ -264,7 +264,7 @@ int main(int argc, char* argv[]) {
 
 		delete[] allInstruments;
 		allInstruments = NULL;
-
+    }
 
     //=============================================================//
     //                      +. start market                        //

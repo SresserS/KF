@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wangkn/KF/apps/main.cpp" "/home/wangkn/KF/apps/CMakeFiles/main.dir/main.cpp.o"
+  "/home/lixf/Kuafu/apps/main.cpp" "/home/lixf/Kuafu/apps/CMakeFiles/main.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,8 +22,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/wangkn/KF/src/CMakeFiles/LogConfig.dir/DependInfo.cmake"
-  "/home/wangkn/KF/src/CMakeFiles/Kuafu.dir/DependInfo.cmake"
+  "/home/lixf/Kuafu/src/CMakeFiles/LogConfig.dir/DependInfo.cmake"
+  "/home/lixf/Kuafu/src/CMakeFiles/Kuafu.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

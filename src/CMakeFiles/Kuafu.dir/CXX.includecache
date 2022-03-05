@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/wangkn/KF/src/Kuafu.cpp
+/home/lixf/Kuafu/src/Kuafu.cpp
 Kuafu.h
-/home/wangkn/KF/src/Kuafu.h
+/home/lixf/Kuafu/src/Kuafu.h
 
 include/Kuafu.h
 
