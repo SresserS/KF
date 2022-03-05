@@ -113,6 +113,15 @@ int main(int argc, char* argv[]) {
     std::string tdf_username ;
     std::string tdf_password ;
 
+    // tdf account config addtional 
+    std::string filepath; 
+    uint32_t client_id;
+    uint32_t tdf_exchange;
+    uint32_t heat_beat_interval;
+    uint32_t quote_buffer_size;
+    uint32_t quote_protocol;
+    uint32_t instrument_count;
+    std::vector<std::string> vec_instruments;
     // risk config
     kf::price_t account_threshold;
     uint32_t    count_threshold  ;
@@ -149,6 +158,19 @@ int main(int argc, char* argv[]) {
         YAML_GET_FIELD(tdf_server_port, tdf_account, server_port);
         YAML_GET_FIELD(tdf_username   , tdf_account, username   );
         YAML_GET_FIELD(tdf_password   , tdf_account, password   );
+        // yaml 初始化 additional
+        YAML_GET_FIELD(client_id         , tdf_account, client_id        );
+        YAML_GET_FIELD(filepath          , tdf_account, path             );
+        YAML_GET_FIELD(tdf_exchange      , tdf_account, exchange_id      );
+        YAML_GET_FIELD(heat_beat_interval, tdf_account, hb_interval      );
+        YAML_GET_FIELD(quote_buffer_size , tdf_account, quote_buffer_size);
+        YAML_GET_FIELD(quote_protocol    , tdf_account, quote_protocol   );  
+        YAML::Node node_instruments   = tdf_account["instrument"];
+        instrument_count         = node_instruments.size();
+        for(int i = 0 ; i < instrument_count ; i++ ){
+            std::string temp_instrument   = node_instruments[0].as<std::string>;
+            vec_instruments.push_back(temp_instrument);
+        }
     }
 
     // Read Config
@@ -215,18 +237,17 @@ int main(int argc, char* argv[]) {
 
 	int loginResult_quote = -1;
 	//登录行情服务器,自1.1.16开始，行情服务器支持UDP连接，推荐使用UDP
-	loginResult_quote = pQuoteApi->Login(tdf_server_ip, tdf_server_port, tdf_username.c_str(), tdf_password.c_str(), quote_protocol); 
+	loginResult_quote = pQuoteApi->Login(tdf_server_ip.c_str(), tdf_server_port, tdf_username.c_str(), tdf_password.c_str(), (XTP_PROTOCOL_TYPE)quote_protocol); 
 	if (loginResult_quote == 0)
 	{
 		//登录行情服务器成功后，订阅行情
-		int instrument_count = ;//yaml::NODE
 		int quote_exchange = tdf_exchange;
 
 		//从配置文件中读取需要订阅的股票
 		char* *allInstruments = new char*[instrument_count];
 		for (int i = 0; i < instrument_count; i++) {
 			allInstruments[i] = new char[7];
-			std::string instrument = ;
+			std::string instrument =vec_instruments[i] ;
 			strcpy(allInstruments[i], instrument.c_str());
 		}
 		
