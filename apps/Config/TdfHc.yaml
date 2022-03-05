@@ -6,3 +6,5 @@ Test:
  server_port: 6002
  username: "253191000198"
  password: "RnancU1F"
+  instrument:
+  -"600120"
