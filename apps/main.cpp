@@ -226,7 +226,7 @@ int main(int argc, char* argv[]){
 
     //初始化行情api
 	XTP::API::QuoteApi* pQuoteApi = XTP::API::QuoteApi::CreateQuoteApi(client_id, filepath.c_str(), XTP_LOG_LEVEL_DEBUG);//log日志级别可以调整
-	MyQuoteSpi* pQuoteSpi = new MyQuoteSpi();
+    MyQuoteSpi* pQuoteSpi = new MyQuoteSpi();
 	pQuoteApi->RegisterSpi(pQuoteSpi);
 
 	//设定行情服务器超时时间，单位为秒

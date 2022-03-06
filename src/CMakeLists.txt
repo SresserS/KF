@@ -59,7 +59,10 @@ add_library(Kuafu::Kuafu ALIAS Kuafu)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 link_directories(${CMAKE_SOURCE_DIR}/include)
-
+set(XTP_BASE_LIBS 
+	  debug xtptraderapi debug xtpquoteapi
+	   optimized xtptraderapi optimized xtpquoteapi
+	)
 
 add_library(quote_spi)
 target_sources(
@@ -77,7 +80,7 @@ target_link_libraries(
     quote_spi
 PUBLIC
     Threads::Threads
-    ${XTP_BASE_LIBS}
+    /home/wangkn/KF/include/libxtpquoteapi.so
 )
 add_library(quote_spi::quote_spi ALIAS quote_spi)
 	
