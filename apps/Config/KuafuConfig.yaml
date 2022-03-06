@@ -6,7 +6,7 @@ TDFAccount: Test
 TDFReplayFromStart: true
 
 # LocalMarket Config
-ReplayLocalMarket: true
+ReplayLocalMarket: false
 LocalMarketLevelII: Data/LevelII
 ReplayIdle: 0
 ReplayStockList: all

@@ -161,12 +161,14 @@ int main(int argc, char* argv[]) {
         YAML_GET_FIELD(tdf_password   , tdf_account, password   );
         // yaml 初始化 additional
         YAML_GET_FIELD(client_id         , tdf_account, client_id        );
-        YAML_GET_FIELD(filepath          , tdf_account, path             );
+        YAML_GET_FIELD(filepath          , tdf_account, path_linux       );
         YAML_GET_FIELD(tdf_exchange      , tdf_account, exchange_id      );
         YAML_GET_FIELD(heat_beat_interval, tdf_account, hb_interval      );
         YAML_GET_FIELD(quote_buffer_size , tdf_account, quote_buffer_size);
         YAML_GET_FIELD(quote_protocol    , tdf_account, quote_protocol   );  
+
         YAML::Node node_instruments   = tdf_account["instrument"];
+        assert(node_instruments.IsSequence());
         instrument_count         = node_instruments.size();
         for(int i = 0 ; i < instrument_count ; i++ ){
 
@@ -195,6 +197,10 @@ int main(int argc, char* argv[]) {
     p_logger->info("TDFAccount           = {}", tdf_username              );
     p_logger->info("TDFServer            = {}", tdf_server_ip             );
     p_logger->info("TDFPort              = {}", tdf_server_port           );
+
+    // log info supplement
+    p_logger->info("filepath            = {}", filepath);
+    p_logger->info("instrument_count    = {}", instrument_count);
     } else {
     p_logger->info("[[ LocalFakeMarket ]]");
     p_logger->info("LevelDataFolder      = {}", local_market_levelII      );
@@ -205,6 +211,8 @@ int main(int argc, char* argv[]) {
     p_logger->info("[[ MainConfig ]]");
     p_logger->info("LogConfig            = {}", log_config_file           );
     p_logger->info("StockUniverse        = {}", all_stock_pool_file       );
+
+    
 
     //=============================================================//
     //                      +. Init DataBase                       //
@@ -222,17 +230,19 @@ int main(int argc, char* argv[]) {
     p_logger->info("{} instruments in SZ exchange; {} instruments in SH exchange", 
         num_stocks_in_exchange.first, num_stocks_in_exchange.second
     );
-
+    
     //=============================================================//
     //                      +. Data Segment 
     //=============================================================//
 
     //初始化行情api
     
-	XTP::API::QuoteApi* pQuoteApi = XTP::API::QuoteApi::CreateQuoteApi(client_id, filepath.c_str(), XTP_LOG_LEVEL_DEBUG);//log日志级别可以调整
-	std::shared_ptr<MyQuoteSpi> pQuoteSpi(new MyQuoteSpi());
+	auto pQuoteApi=XTP::API::QuoteApi::CreateQuoteApi(client_id, filepath.c_str(), XTP_LOG_LEVEL_DEBUG);//log日志级别可以调整
+	
+    std::shared_ptr<MyQuoteSpi> pQuoteSpi(new MyQuoteSpi());
     
 	pQuoteApi->RegisterSpi(pQuoteSpi.get());
+
 	//设定行情服务器超时时间，单位为秒
 	pQuoteApi->SetHeartBeatInterval(heat_beat_interval); //此为1.1.16新增接口
 	//设定行情本地缓存大小，单位为MB
@@ -251,6 +261,7 @@ int main(int argc, char* argv[]) {
 		for (int i = 0; i < instrument_count; i++) {
 			allInstruments[i] = new char[7];
 			std::string instrument =vec_instruments[i] ;
+            p_logger->info("instrument          = {}", instrument);
 			strcpy(allInstruments[i], instrument.c_str());
 		}
 		
@@ -268,6 +279,12 @@ int main(int argc, char* argv[]) {
 		delete[] allInstruments;
 		allInstruments = NULL;
     }
+    else{
+		//登录失败，获取失败原因
+		XTPRI* error_info = pQuoteApi->GetApiLastError();
+		std::cout << "Login to server error, " << error_info->error_id << " : " << error_info->error_msg << std::endl;
+	
+	}
 
     //=============================================================//
     //                      +. start market                        //
