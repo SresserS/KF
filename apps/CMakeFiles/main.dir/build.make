@@ -85,6 +85,7 @@ apps/main: src/libquote_spi.a
 apps/main: /usr/local/lib/libyaml-cpp.so.0.6.3
 apps/main: /usr/local/lib/libspdlog.a
 apps/main: /usr/local/lib/libfmt.a
+apps/main: src/libxtpquoteapi.so
 apps/main: apps/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
 	cd /home/lixf/Kuafu/apps && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

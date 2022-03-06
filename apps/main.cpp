@@ -32,6 +32,7 @@
 #include <vector>
 #include <fstream>
 #include <stdio.h>
+#include <memory>
 
 std::atomic<bool> quit_flag = false;
 
@@ -227,10 +228,11 @@ int main(int argc, char* argv[]) {
     //=============================================================//
 
     //初始化行情api
+    
 	XTP::API::QuoteApi* pQuoteApi = XTP::API::QuoteApi::CreateQuoteApi(client_id, filepath.c_str(), XTP_LOG_LEVEL_DEBUG);//log日志级别可以调整
-	MyQuoteSpi* pQuoteSpi = new MyQuoteSpi();
-	pQuoteApi->RegisterSpi(pQuoteSpi);
-
+	std::shared_ptr<MyQuoteSpi> pQuoteSpi(new MyQuoteSpi());
+    
+	pQuoteApi->RegisterSpi(pQuoteSpi.get());
 	//设定行情服务器超时时间，单位为秒
 	pQuoteApi->SetHeartBeatInterval(heat_beat_interval); //此为1.1.16新增接口
 	//设定行情本地缓存大小，单位为MB

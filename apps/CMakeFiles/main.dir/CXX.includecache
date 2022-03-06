@@ -61,6 +61,8 @@ fstream
 -
 stdio.h
 -
+memory
+-
 
 include/Kuafu.h
 
