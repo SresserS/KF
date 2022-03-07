@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lixf/Kuafu/src/quote_spi.cpp" "/home/lixf/Kuafu/src/CMakeFiles/quote_spi.dir/quote_spi.cpp.o"
+  "/home/wangkn/KF/src/quote_spi.cpp" "/home/wangkn/KF/src/CMakeFiles/quote_spi.dir/quote_spi.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

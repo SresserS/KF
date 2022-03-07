@@ -6,5 +6,5 @@ CXX_FLAGS =   -pthread -std=c++17
 
 CXX_DEFINES = -DFMT_LOCALE -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL
 
-CXX_INCLUDES = -I/home/lixf/Kuafu/include 
+CXX_INCLUDES = -I/home/wangkn/KF/include 
 

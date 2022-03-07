@@ -74,7 +74,7 @@ target_link_libraries(
 	quote_spi
 PUBLIC
     Threads::Threads
-    /home/lixf/Kuafu/src/libxtpquoteapi.so
+    /home/wangkn/KF/src/libxtpquoteapi.so
 )
 add_library(quote_spi::quote_spi ALIAS quote_spi)
 

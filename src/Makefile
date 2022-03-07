@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lixf/Kuafu
+CMAKE_SOURCE_DIR = /home/wangkn/KF
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lixf/Kuafu
+CMAKE_BINARY_DIR = /home/wangkn/KF
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lixf/Kuafu && $(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles /home/lixf/Kuafu/src/CMakeFiles/progress.marks
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 0
+	cd /home/wangkn/KF && $(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles /home/wangkn/KF/src/CMakeFiles/progress.marks
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lixf/Kuafu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wangkn/KF && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/quote_spi.dir/rule:
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/quote_spi.dir/rule
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/quote_spi.dir/rule
 .PHONY : src/CMakeFiles/quote_spi.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ quote_spi: src/CMakeFiles/quote_spi.dir/rule
 
 # fast build rule for target.
 quote_spi/fast:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
 .PHONY : quote_spi/fast
 
 # Convenience name for target.
 src/CMakeFiles/Kuafu.dir/rule:
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Kuafu.dir/rule
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Kuafu.dir/rule
 .PHONY : src/CMakeFiles/Kuafu.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ Kuafu: src/CMakeFiles/Kuafu.dir/rule
 
 # fast build rule for target.
 Kuafu/fast:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/build
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/build
 .PHONY : Kuafu/fast
 
 # Convenience name for target.
 src/CMakeFiles/LogConfig.dir/rule:
-	cd /home/lixf/Kuafu && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/LogConfig.dir/rule
+	cd /home/wangkn/KF && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/LogConfig.dir/rule
 .PHONY : src/CMakeFiles/LogConfig.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ LogConfig: src/CMakeFiles/LogConfig.dir/rule
 
 # fast build rule for target.
 LogConfig/fast:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/build
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/build
 .PHONY : LogConfig/fast
 
 Kuafu.o: Kuafu.cpp.o
@@ -218,7 +218,7 @@ Kuafu.o: Kuafu.cpp.o
 
 # target to build an object file
 Kuafu.cpp.o:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/Kuafu.cpp.o
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/Kuafu.cpp.o
 .PHONY : Kuafu.cpp.o
 
 Kuafu.i: Kuafu.cpp.i
@@ -227,7 +227,7 @@ Kuafu.i: Kuafu.cpp.i
 
 # target to preprocess a source file
 Kuafu.cpp.i:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/Kuafu.cpp.i
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/Kuafu.cpp.i
 .PHONY : Kuafu.cpp.i
 
 Kuafu.s: Kuafu.cpp.s
@@ -236,7 +236,7 @@ Kuafu.s: Kuafu.cpp.s
 
 # target to generate assembly for a file
 Kuafu.cpp.s:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/Kuafu.cpp.s
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/Kuafu.cpp.s
 .PHONY : Kuafu.cpp.s
 
 LogConfig.o: LogConfig.cpp.o
@@ -245,7 +245,7 @@ LogConfig.o: LogConfig.cpp.o
 
 # target to build an object file
 LogConfig.cpp.o:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.o
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.o
 .PHONY : LogConfig.cpp.o
 
 LogConfig.i: LogConfig.cpp.i
@@ -254,7 +254,7 @@ LogConfig.i: LogConfig.cpp.i
 
 # target to preprocess a source file
 LogConfig.cpp.i:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.i
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.i
 .PHONY : LogConfig.cpp.i
 
 LogConfig.s: LogConfig.cpp.s
@@ -263,7 +263,7 @@ LogConfig.s: LogConfig.cpp.s
 
 # target to generate assembly for a file
 LogConfig.cpp.s:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.s
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/LogConfig.cpp.s
 .PHONY : LogConfig.cpp.s
 
 quote_spi.o: quote_spi.cpp.o
@@ -272,7 +272,7 @@ quote_spi.o: quote_spi.cpp.o
 
 # target to build an object file
 quote_spi.cpp.o:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.o
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.o
 .PHONY : quote_spi.cpp.o
 
 quote_spi.i: quote_spi.cpp.i
@@ -281,7 +281,7 @@ quote_spi.i: quote_spi.cpp.i
 
 # target to preprocess a source file
 quote_spi.cpp.i:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.i
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.i
 .PHONY : quote_spi.cpp.i
 
 quote_spi.s: quote_spi.cpp.s
@@ -290,7 +290,7 @@ quote_spi.s: quote_spi.cpp.s
 
 # target to generate assembly for a file
 quote_spi.cpp.s:
-	cd /home/lixf/Kuafu && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.s
+	cd /home/wangkn/KF && $(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/quote_spi.cpp.s
 .PHONY : quote_spi.cpp.s
 
 # Help Target
@@ -329,6 +329,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lixf/Kuafu && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wangkn/KF && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

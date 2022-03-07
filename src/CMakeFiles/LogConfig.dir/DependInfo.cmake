@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lixf/Kuafu/src/LogConfig.cpp" "/home/lixf/Kuafu/src/CMakeFiles/LogConfig.dir/LogConfig.cpp.o"
+  "/home/wangkn/KF/src/LogConfig.cpp" "/home/wangkn/KF/src/CMakeFiles/LogConfig.dir/LogConfig.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

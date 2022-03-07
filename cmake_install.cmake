@@ -1,4 +1,4 @@
-# Install script for directory: /home/lixf/Kuafu
+# Install script for directory: /home/wangkn/KF
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lixf/Kuafu/src/cmake_install.cmake")
-  include("/home/lixf/Kuafu/apps/cmake_install.cmake")
+  include("/home/wangkn/KF/src/cmake_install.cmake")
+  include("/home/wangkn/KF/apps/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lixf/Kuafu/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wangkn/KF/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

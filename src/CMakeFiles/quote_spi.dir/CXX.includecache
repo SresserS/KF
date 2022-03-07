@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/lixf/Kuafu/src/quote_spi.cpp
+/home/wangkn/KF/src/quote_spi.cpp
 quote_spi.h
-/home/lixf/Kuafu/src/quote_spi.h
+/home/wangkn/KF/src/quote_spi.h
 iostream
 -
 stdio.h

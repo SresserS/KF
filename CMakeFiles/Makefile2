@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lixf/Kuafu
+CMAKE_SOURCE_DIR = /home/wangkn/KF
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lixf/Kuafu
+CMAKE_BINARY_DIR = /home/wangkn/KF
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -117,14 +117,14 @@ src/clean: src/CMakeFiles/LogConfig.dir/clean
 src/CMakeFiles/quote_spi.dir/all:
 	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/depend
 	$(MAKE) -f src/CMakeFiles/quote_spi.dir/build.make src/CMakeFiles/quote_spi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=7,8 "Built target quote_spi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangkn/KF/CMakeFiles --progress-num=7,8 "Built target quote_spi"
 .PHONY : src/CMakeFiles/quote_spi.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/quote_spi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/quote_spi.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
 .PHONY : src/CMakeFiles/quote_spi.dir/rule
 
 # Convenience name for target.
@@ -144,14 +144,14 @@ src/CMakeFiles/quote_spi.dir/clean:
 src/CMakeFiles/Kuafu.dir/all:
 	$(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/depend
 	$(MAKE) -f src/CMakeFiles/Kuafu.dir/build.make src/CMakeFiles/Kuafu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=1,2 "Built target Kuafu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangkn/KF/CMakeFiles --progress-num=1,2 "Built target Kuafu"
 .PHONY : src/CMakeFiles/Kuafu.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/Kuafu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Kuafu.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
 .PHONY : src/CMakeFiles/Kuafu.dir/rule
 
 # Convenience name for target.
@@ -171,14 +171,14 @@ src/CMakeFiles/Kuafu.dir/clean:
 src/CMakeFiles/LogConfig.dir/all:
 	$(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/depend
 	$(MAKE) -f src/CMakeFiles/LogConfig.dir/build.make src/CMakeFiles/LogConfig.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=3,4 "Built target LogConfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangkn/KF/CMakeFiles --progress-num=3,4 "Built target LogConfig"
 .PHONY : src/CMakeFiles/LogConfig.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/LogConfig.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/LogConfig.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
 .PHONY : src/CMakeFiles/LogConfig.dir/rule
 
 # Convenience name for target.
@@ -200,14 +200,14 @@ apps/CMakeFiles/main.dir/all: src/CMakeFiles/Kuafu.dir/all
 apps/CMakeFiles/main.dir/all: src/CMakeFiles/LogConfig.dir/all
 	$(MAKE) -f apps/CMakeFiles/main.dir/build.make apps/CMakeFiles/main.dir/depend
 	$(MAKE) -f apps/CMakeFiles/main.dir/build.make apps/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lixf/Kuafu/CMakeFiles --progress-num=5,6 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wangkn/KF/CMakeFiles --progress-num=5,6 "Built target main"
 .PHONY : apps/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 apps/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 apps/CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lixf/Kuafu/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangkn/KF/CMakeFiles 0
 .PHONY : apps/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
